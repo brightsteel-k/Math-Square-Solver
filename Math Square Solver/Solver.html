@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Square Solver</title>
+    <h2>Configure Math Square</h2>
+</head>
+<link rel="stylesheet" href="Solver.css">
+<script src="Source/Main.js"></script>
+<body onload="init()">
+    <div style="float:left;padding:5px;">
+        <label>Selected width: </label><b id="x_label">3 </b><br>
+        <input type="range" id="x_selector" value="3" min="2" max="8" oninput="updateSelector('x');" onchange="generateBoard()">
+    </div>
+    <div style="padding:5px;">
+        <label>Selected height: </label><b id="y_label">3</b><br>
+        <input type="range" id="y_selector" value="3" min="2" max="8" oninput="updateSelector('y');" onchange="generateBoard()">
+    </div>
+
+    <br><br><br>
+    <div class="board">
+
+    </div>
+
+</body>
+</html>
