@@ -4,38 +4,61 @@ body {
     white-space:nowrap;
 }
 
-#number-box {
-    height: 50px;
-    width: 50px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-style: ridge;
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-gap: 5px;
+    padding: 20px;
 }
 
-#number-label {
+.number-box {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.number-label {
     color: black;
     font-size: 24px;
     text-align: center;
     vertical-align: middle;
 }
 
-#operation-button {
+.operation-box {
     height: 50px;
     width: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.operation-button {
+    height: 50px;
+    width: 50px;
+    background-color: silver;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-style: ridge;
 }
 
-#operation-button:hover {
-    background-color: red;
+.operation-button:hover {
+    background-color: gray;
 }
 
-#operation-label {
+.operation-label {
     color: black;
     font-size: 24px;
     text-align: center;
     vertical-align: middle;
+}
+
+.blank-box {
+    height: 20px;
+    width: 55px;
+    align-items: center;
+    justify-content: center;
 }
