@@ -1,7 +1,7 @@
 body {
-    background-color: silver;
-    overflow:auto;
-    white-space:nowrap;
+    background-color: rgb(165, 164, 191);
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .board {
@@ -14,7 +14,7 @@ body {
 .number-box {
     height: 50px;
     width: 50px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -22,6 +22,13 @@ body {
 
 .number-label {
     color: black;
+    font-size: 24px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.number-label-solving {
+    color: rgb(161, 105, 252);
     font-size: 24px;
     text-align: center;
     vertical-align: middle;
@@ -56,9 +63,95 @@ body {
     vertical-align: middle;
 }
 
+.equals-box {
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.target-box {
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.target-field {
+    height: 50px;
+    width: 50px;
+    background-color: silver;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-style: ridge;
+    text-align: center;
+    font-size: 20px;
+}
+
+.target-field:hover {
+    background-color: gray;
+}
+
+.solve#off {
+    height: 40px;
+    width: 120px;
+    position: relative;
+        left: 60px;
+        top: 10px;
+    align-items: center;
+    justify-content: center;
+    border-style: ridge;
+    border: 2px solid black;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Times New Roman', serif;
+    background-image: linear-gradient(white, silver);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 3px 10px 0 rgba(0,0,0,0.09);
+    transition: 0.2s;
+}
+
+.solve#off:hover {
+    background-image: linear-gradient(rgb(139, 104, 196), rgb(99, 66, 153));
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.solve#off:active {
+    background-image: linear-gradient(rgb(204, 179, 245), rgb(152, 117, 209));
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.4);
+}
+
+.solve#on {
+    height: 40px;
+    width: 120px;
+    position: relative;
+        left: 60px;
+        top: 10px;
+    align-items: center;
+    justify-content: center;
+    border-style: ridge;
+    border: 2px solid black;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Times New Roman', serif;
+    background-image: linear-gradient(rgb(204, 179, 245), rgb(152, 117, 209));
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.4);
+    transition: 0.2s;
+}
+
 .blank-box {
     height: 20px;
     width: 55px;
     align-items: center;
     justify-content: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

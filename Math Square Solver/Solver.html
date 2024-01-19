@@ -8,21 +8,30 @@
 <link rel="stylesheet" href="Solver.css">
 <script src="Source/Operation.js"></script>
 <script src="Source/Calculator.js"></script>
+<script src="Source/SolveState.js"></script>
 <script src="Source/Main.js"></script>
 <body onload="init()">
-    <div style="float:left;padding:5px;">
-        <label>Selected width: </label><b id="x_label">3 </b><br>
-        <input type="range" id="x_selector" value="3" min="2" max="8" oninput="updateSelector('x');" onchange="generateBoard()">
+    <div style="display:inline-flex">
+        <div style="float:left;padding:5px;">
+            <label>Selected width: </label><b id="x_label">3 </b><br>
+            <input type="range" id="x_selector" value="3" min="2" max="8" oninput="updateSelector('x')" onchange="generateBoard()">
+        </div>
+        <div style="padding:5px;">
+            <label>Selected height: </label><b id="y_label">3</b><br>
+            <input type="range" id="y_selector" value="3" min="2" max="8" oninput="updateSelector('y')" onchange="generateBoard()">
+        </div>
+        <button type="button" class="solve" id="off" onclick="onSolveClicked()">Solve</button>
     </div>
-    <div style="padding:5px;">
-        <label>Selected height: </label><b id="y_label">3</b><br>
-        <input type="range" id="y_selector" value="3" min="2" max="8" oninput="updateSelector('y');" onchange="generateBoard()">
+    <div>
+        <label>Possible values: </label><b id="pvalues_label">1-9</b>
     </div>
 
     <br><br><br>
     <div class="board">
 
     </div>
-
+    <div class="debug">
+        <p class="log">DEBUG:</p>
+    </div>
 </body>
 </html>
